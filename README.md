@@ -5,7 +5,7 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/Cypher1998/fm-countdown-timer)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [FrontendMentor Countdown Timer URL](https://frontend-mentor-countdown-timer.netlify.app/)
 
 ### Built with
 
@@ -14,7 +14,7 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
 - CSS Grid
 - CSS Animation for flip cards
 - Mobile-first workflow
-- [Typescript](https://reactjs.org/) - Superset of Javascript (type checking)
+- [Typescript](https://www.typescriptlang.org/) - Superset of Javascript (type checking)
 
 ## Author
 
