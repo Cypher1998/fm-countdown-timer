@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: url('/images/bg-stars.svg') no-repeat,
+    url('/images/pattern-hills.svg') bottom right no-repeat, hsl(234, 17%, 12%);
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.timerContainer {
+  padding: 8rem 3rem 2rem;
+  max-width: 516px;
+  margin: auto;
+}
+
+@media (max-width: 476px) {
+  .timerContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  letter-spacing: 4px;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 576px) {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.timerDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-content: center;
+}
+
+.timer {
+  position: relative;
+}
+
+.timer .top {
+  width: inherit;
+  height: 2rem;
+  background: hsl(235, 16%, 14%);
+  border-radius: 3px;
+  margin-bottom: 0.1rem;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.timer .bottom {
+  width: inherit;
+  height: 2rem;
+  background: hsl(236, 21%, 26%);
+  border-radius: 3px;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.timer .background {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4.35rem;
+  height: 50%;
+  margin: 0 0.2rem;
+  width: inherit;
+  background: hsl(236, 21%, 26%);
+  position: absolute;
+  z-index: 1;
+}
+
+.timer .flip {
+  height: 3rem;
+  margin: 0;
+  z-index: 5;
+  background: transparent;
+}
+
+.timer h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  text-align: center;
+  color: hsl(345, 95%, 68%);
+  z-index: 10;
+  font-size: 3rem;
+}
+
+@media (max-width: 476px) {
+  .timer h2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 386px) {
+  .timer h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.flipSecondsDiv {
+  animation: flipSeconds 1.15s ease-in-out infinite;
+}
+
+.flipDiv {
+  animation: flipSeconds 1s ease-in-out 0.4s forwards;
+}
+
+@keyframes flipSeconds {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    background: hsl(236, 21%, 26%);
+  }
+
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+.timer p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  text-align: center;
+  color: hsl(237, 18%, 59%);
+}
+
+@media (min-width: 486px) {
+  .timer .top {
+    height: 2.2rem;
+  }
+
+  .timer .bottom {
+    height: 2.2rem;
+  }
+
+  .timer .background {
+    height: 4.45;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+footer img:hover {
+  background: hsl(345, 95%, 68%);
+}
+
+.waitOver {
+  color: hsl(345, 95%, 68%);
+  text-align: center;
+  grid-column: 1/5;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
